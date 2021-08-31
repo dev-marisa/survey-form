@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Survey Data</legend>
+        <p>Name: {{ form_data.name }}</p>
+        <p>Email: {{ form_data.email }}</p>
+        <p>Has a pet: {{ form_data.has_pet }}</p>
+        <ul>
+            {% if 'has_cat' in form_data %}
+            <li>{{ form_data.has_cat }}</li>
+            {% endif %}
+            {% if 'has_dog' in form_data %}
+            <li>{{ form_data.has_dog }}</li>
+            {% endif %}
+            {% if 'has_fish' in form_data %}
+            <li>{{ form_data.has_fish }}</li>
+            {% endif %}
+            {% if 'has_bird' in form_data %}
+            <li>{{ form_data.has_bird }}</li>
+            {% endif %}
+            {% if 'has_snake' in form_data %}
+            <li>{{ form_data.has_snake }}</li>
+            {% endif %}
+            {% if 'has_other' in form_data %}
+            <li>{{ form_data.other_animal_type }}</li>
+            {% endif %}
+        </ul>
+        <p>Comment: {{ form_data.comment }}</p>
+        <p><a href="/">Fill out the form again</a></p>
+    </fieldset>
+</body>
+</html>
